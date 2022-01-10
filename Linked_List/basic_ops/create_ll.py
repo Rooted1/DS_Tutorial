@@ -50,3 +50,15 @@ class LinkedList:
                 current_node = current_node.get_next_node()
             new_node.set_next_node(current_node.get_next_node())
             current_node.set_next_node(new_node)
+
+    # update a node value
+    def update_node(self, value_to_update, new_value):
+        if self.head_node.get_value() == value_to_update:
+            self.head_node.set_value(new_value)
+        else:
+            current_node = self.head_node.get_next_node()
+            while current_node:
+                if current_node.get_value() != value_to_update:
+                    current_node = current_node.get_next_node()
+                current_node.set_value(new_value)
+                current_node = None

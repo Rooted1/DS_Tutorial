@@ -22,3 +22,9 @@ print()
 # add new node btw nodes and print ll --> outputs 35 20 23 45
 ll.add_in_btw(35, 20)
 ll.printll()
+
+print() 
+
+# update node value and print ll --> outputs 16 20 23 45
+ll.update_node(35, 16)
+ll.printll()
