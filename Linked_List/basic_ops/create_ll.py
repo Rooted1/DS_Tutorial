@@ -28,7 +28,7 @@ class LinkedList:
                     print(current_node.get_value(), end=" ")
                 current_node = current_node.get_next_node()
 
-    # add new node to end of ll
+    # add new node to end of ll - append
     def add_to_end(self, value):
         if self.head_node.get_value() == None:
             self.head_node.set_value(value)
@@ -37,4 +37,16 @@ class LinkedList:
             current_node = self.head_node
             while current_node.get_next_node() != None:
                 current_node = current_node.get_next_node()
+            current_node.set_next_node(new_node)
+
+    # add new node in between nodes in ll - insert
+    def add_in_btw(self, lookup_value, value_to_add):
+        if self.head_node.get_value() == None:
+            self.head_node.set_value(value_to_add)
+        else:
+            new_node = Node(value_to_add)
+            current_node = self.head_node
+            while current_node.get_value() != lookup_value:
+                current_node = current_node.get_next_node()
+            new_node.set_next_node(current_node.get_next_node())
             current_node.set_next_node(new_node)
