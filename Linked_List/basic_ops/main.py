@@ -28,3 +28,9 @@ print()
 # update node value and print ll --> outputs 16 20 23 45
 ll.update_node(35, 16)
 ll.printll()
+
+print() 
+
+# remove node and print ll --> outputs 16 20 23
+ll.remove_node(45)
+ll.printll()
