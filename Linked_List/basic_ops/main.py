@@ -1,4 +1,4 @@
-from create_node import Node 
+from create_ll import LinkedList 
 
-sample_node = Node(23)
-print(sample_node.get_value())
+ll = LinkedList()
+print(ll.get_head_node().get_value())
