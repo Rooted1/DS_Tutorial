@@ -27,3 +27,14 @@ class LinkedList:
                 if current_node.get_value() != None:
                     print(current_node.get_value(), end=" ")
                 current_node = current_node.get_next_node()
+
+    # add new node to end of ll
+    def add_to_end(self, value):
+        if self.head_node.get_value() == None:
+            self.head_node.set_value(value)
+        else:
+            new_node = Node(value)
+            current_node = self.head_node
+            while current_node.get_next_node() != None:
+                current_node = current_node.get_next_node()
+            current_node.set_next_node(new_node)
