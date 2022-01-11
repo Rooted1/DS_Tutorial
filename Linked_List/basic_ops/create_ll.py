@@ -77,3 +77,12 @@ class LinkedList:
                 else:
                     previous_node.set_next_node(current_node.get_next_node())
                     current_node = None
+
+    # traverse ll and count how many nodes
+    def traverse_ll(self):
+        count = 0
+        current_node = self.head_node
+        while current_node != None:
+            count += 1
+            current_node = current_node.get_next_node()
+        return count

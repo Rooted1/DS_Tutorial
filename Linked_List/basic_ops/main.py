@@ -33,4 +33,8 @@ print()
 
 # remove node and print ll --> outputs 16 20 23
 ll.remove_node(45)
-ll.printll()
+ll.printll() 
+
+print()
+
+print(ll.traverse_ll())
