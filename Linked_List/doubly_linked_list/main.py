@@ -1,5 +1,7 @@
-from create_node import Node 
+from create_dll import DoublyLinkedList 
 
-node1 = Node(32) 
+dll = DoublyLinkedList(85)
 
-print(node1.get_value())
+# print values of head and tail nodes
+print(dll.get_head_node().get_value())
+print(dll.get_tail_node().get_value())
