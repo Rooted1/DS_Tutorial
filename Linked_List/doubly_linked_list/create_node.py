@@ -21,5 +21,5 @@ class Node:
         self.prev_node = prev_node 
 
     # set node next pointer
-    def set_next_nmode(self, next_node):
+    def set_next_node(self, next_node):
         self.next_node = next_node 
