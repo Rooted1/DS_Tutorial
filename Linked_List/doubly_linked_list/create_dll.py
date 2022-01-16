@@ -22,3 +22,14 @@ class DoublyLinkedList:
         new_node.set_next_node(current_head)
         current_head.set_prev_node(new_node)
         self.head_node = new_node
+
+    # add new node to end of dll
+    def add_to_end(self, value):
+        new_node = Node(value)
+        if self.tail_node.get_value() == None:
+            self.tail_node = self.head_node = new_node
+        current_tail = self.tail_node
+        current_tail.set_next_node(new_node)
+        new_node.set_prev_node(current_tail)
+        self.tail_node = new_node
+            
