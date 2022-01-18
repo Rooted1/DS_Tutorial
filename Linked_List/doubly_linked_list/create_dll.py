@@ -33,3 +33,14 @@ class DoublyLinkedList:
         new_node.set_prev_node(current_tail)
         self.tail_node = new_node
             
+    # remove head node
+    def remove_head(self):
+        head_to_remove = self.head_node
+        if head_to_remove == None:
+            return None
+        self.head_node = head_to_remove.get_next_node()
+        if self.head_node != None:
+            self.head_node.set_prev_node(None)
+        if self.head_node == None:
+            return None
+        return self.head_node.get_value()
