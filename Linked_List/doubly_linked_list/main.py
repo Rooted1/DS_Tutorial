@@ -24,3 +24,7 @@ print("remove head and print new head: ")
 
 print(dll.remove_head())
 
+print("remove tail node twice and print new head: ")
+print(dll.remove_tail())
+print(dll.remove_tail())
+

@@ -44,3 +44,15 @@ class DoublyLinkedList:
         if self.head_node == None:
             return None
         return self.head_node.get_value()
+
+    # remove tail node
+    def remove_tail(self):
+        tail_to_remove = self.tail_node 
+        if tail_to_remove == None:
+            return None
+        self.tail_node = tail_to_remove.get_prev_node()
+        if self.tail_node != None:
+            self.tail_node.set_next_node(None)
+        if self.tail_node == None:
+            return None 
+        return self.tail_node.get_value()
