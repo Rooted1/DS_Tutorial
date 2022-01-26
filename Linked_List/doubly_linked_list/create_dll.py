@@ -78,3 +78,11 @@ class DoublyLinkedList:
             next_node.set_prev_node(prev_node)
             prev_node.set_next_node(next_node)
         return node_to_remove
+
+    # print nodes in dll
+    def print_dll(self):
+        current_node = self.head_node
+        while current_node:
+            if current_node != None:
+                print(current_node.get_value(), end=" ")
+            current_node = current_node.get_next_node()
