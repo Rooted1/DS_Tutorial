@@ -1,6 +1,6 @@
 from create_dll import DoublyLinkedList 
 
-dll = DoublyLinkedList(85)
+dll = DoublyLinkedList()
 
 # print values of head and tail nodes
 # print(dll.get_head_node().get_value())
@@ -16,6 +16,7 @@ dll.add_to_beginning(14)
 # print("Add new tail node: ")
 
 dll.add_to_end(78)
+dll.add_to_end(84)
 # print values of head and tail nodes --> outputs 14 85
 # print(dll.get_head_node().get_value())
 # print(dll.get_tail_node().get_value())

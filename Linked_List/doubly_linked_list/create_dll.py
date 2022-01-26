@@ -2,9 +2,9 @@ from platform import node
 from create_node import Node
 
 class DoublyLinkedList:
-    def __init__(self, value=None):
-        self.head_node = Node(value)
-        self.tail_node = Node(value)
+    def __init__(self):
+        self.head_node = None
+        self.tail_node = None
 
     # get head node 
     def get_head_node(self):
@@ -17,7 +17,7 @@ class DoublyLinkedList:
     # add new node to beginning of dll
     def add_to_beginning(self, value):
         new_node = Node(value)
-        if self.head_node.get_value() == None:
+        if self.head_node == None:
             self.head_node = self.tail_node = new_node
         current_head = self.head_node 
         new_node.set_next_node(current_head)
@@ -27,7 +27,7 @@ class DoublyLinkedList:
     # add new node to end of dll
     def add_to_end(self, value):
         new_node = Node(value)
-        if self.tail_node.get_value() == None:
+        if self.tail_node == None:
             self.tail_node = self.head_node = new_node
         current_tail = self.tail_node
         current_tail.set_next_node(new_node)
@@ -58,6 +58,7 @@ class DoublyLinkedList:
             self.remove_head() 
         return tail_to_remove.get_value()
 
+    # remove node by value in dll
     def remove_by_value(self, value_to_remove):
         node_to_remove = None 
         current_node = self.head_node
